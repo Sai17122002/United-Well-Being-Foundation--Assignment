@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: sandybrown;
+  padding: 100px 0;
+  font-family: "Roboto", sans-serif;
+  transition: all 1s ease;
+}
+
+.parent {
+  width: 1400px;
+  display: grid;
+  grid-template-columns: 47% 47%;
+  grid-gap: 6%;
+  margin: 0 auto;
+}
+
+.parent .card,
+.parent .show-more-content.card {
+  background: whitesmoke;
+  border-radius: 5px;
+  display: flex;
+  box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+.photo {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(230, 59, 59);
+  color: aliceblue;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.photo p {
+  margin: 20px 0;
+  font-size: 25px;
+}
+
+.details {
+  width: 60%;
+  text-align: center;
+  padding: 20px 0;
+  background: whitesmoke;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.details h2 {
+  margin-bottom: 10px;
+  font-size: 40px;
+}
+
+.details p {
+  margin-bottom: 20px;
+}
+
+.details .about {
+  padding: 0 20px;
+  text-align: left;
+}
+
+.details .qualification {
+  font-size: 30px;
+}
+
+img {
+  border-radius: 50%;
+}
+
+button,
+.card .button button {
+  border: none;
+  outline: none;
+  padding: 10px;
+  background: rgb(8, 212, 8);
+  border-radius: 8px;
+  width: 200px;
+  color: aliceblue;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.card .button {
+  padding-top: 20px;
+}
+
+img.women {
+  background: lightblue;
+}
+
+.show-more-button button {
+  background: rgb(20, 141, 182);
+  border-radius: 13px;
+  margin-bottom: 30px;
+  transform: translateY(-20px);
+}
+
+.show-more-button {
+  text-align: center;
+  grid-column: 1 / span 2;
+}
+
+.parent .show-more-content.card {
+  display: none;
+}
+
+.parent .show-more-content.card.active {
+  display: flex;
+}
+
+.button button:hover {
+  background: rgb(20, 141, 182) !important;
+  transition: all 0.5s ease;
+}
+
+@media only screen and (max-width: 1400px) {
+  .parent {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: 20px auto;
+  }
+
+  .parent .card {
+    margin-bottom: 40px;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  body {
+    width: 300px;
+  }
+  .parent {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 140px;
+  }
+
+  .parent .card {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin-bottom: 40px;
+  }
+
+  .show-more-button {
+    padding-top: 100px;
+  }
+
+  .show-more-button button {
+    width: 200px;
+  }
+
+  .photo {
+    width: 300px;
+  }
+
+  .details {
+    width: 300px;
+  }
+}
+
+/* @media only screen and (min-width: 500px) and (max-width: 1700px) {
+  body {
+    width: 950px;
+  }
+  .parent {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 20px;
+  }
+} */
